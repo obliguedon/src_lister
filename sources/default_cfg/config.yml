@@ -1,0 +1,7 @@
+# delete line that won't be used
+top-yaml: ./<your>/<top>/<file>.yml
+flag: <SIM|FPGA>
+log-level: <INFO|DEBUG|WARNING|ERROR>
+config-file: ./<your>/<config_file>.yml
+format-dir: ./<your>/<format>/<folder>
+output-format: <script_name>
