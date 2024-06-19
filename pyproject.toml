@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=64.0", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "files_lister"
+authors = [
+    {name = "obliguedon"},
+]
+description = "Get all the files listed in multiples YAML files referencing each other"
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["files", "list", "sources", "hdl"]
+license = {file = "LICENCE"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "Environment :: Console",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Localization",
+    "Topic :: Utilities",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    'pyyaml'
+]
+dynamic = ["version"]
+
+
+[project.scripts]
+files_lister = "files_lister:main"
+
+[project.urls]
+Repository = "https://github.com/obliguedon/src_lister"
+Issues = "https://github.com/obliguedon/src_lister/issues"
+
+[tool.setuptools.package-data]
+"files_lister.default_cfg" = ["*.yml"]
+
+[tool.setuptools_scm]
