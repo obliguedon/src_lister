@@ -1,0 +1,5 @@
+sources:
+- ./nbits_adder.sv: FPGA
+
+dependencies:
+- ../full_adder/full_adder.yml

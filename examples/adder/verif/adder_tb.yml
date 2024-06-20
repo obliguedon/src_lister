@@ -1,0 +1,6 @@
+sources:
+- ./adder_tb.sv
+
+dependencies:
+- ../rtl/Nbits_adder/nbits_adder.yml
+- ../rtl/new_Nbits_adder/new_nbits_adder.yml

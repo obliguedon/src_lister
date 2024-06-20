@@ -1,0 +1,5 @@
+sources:
+- ./full_adder.sv
+
+dependencies:
+- ../half_adder/half_adder.yml

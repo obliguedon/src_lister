@@ -1,0 +1,1 @@
+verilator --lint-only  /home/jean/src_lister/examples/adder/rtl/half_adder/half_adder.sv /home/jean/src_lister/examples/adder/rtl/full_adder/full_adder.sv /home/jean/src_lister/examples/adder/rtl/Nbits_adder/nbits_adder.sv

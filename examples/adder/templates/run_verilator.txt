@@ -1,0 +1,1 @@
+verilator --timing --binary --trace --trace-structs -o dut --top-module adder_tb {sources}
