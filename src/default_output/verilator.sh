@@ -1,0 +1,1 @@
+verilator --build {-I{include-dir}} --top-module {top-module} {packages} {sources=.sv} {{test}\n}
