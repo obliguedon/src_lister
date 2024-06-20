@@ -8,3 +8,8 @@ to create the script and run the simulation, simply use:
 ```
 make sim
 ```
+
+you can specify a flag to use different sources file
+```
+make sim FLAG=SIM
+```

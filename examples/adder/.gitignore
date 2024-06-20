@@ -1,2 +1,4 @@
 obj_dir/
 dump.vcd
+lint_verilator.sh
+run_verilator.sh
