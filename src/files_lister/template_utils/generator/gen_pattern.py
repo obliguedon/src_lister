@@ -19,7 +19,7 @@ def gen_pattern(param: re.Match, files_list: typing.List[pathlib.PosixPath]) -> 
             logging.debug(f"item suffix = {pathlib.Path(file).suffix}")
             logging.debug(f"regex suffix = {param.group('extension')}")
 
-            if (pathlib.Path(file).suffix == param.group("extension")):
+            if ((param.group("extension") == None) or (pathlib.Path(file).suffix == param.group("extension"))):
                 file_found = True
                 if (param.group("prefix") != None):
                     string += param.group("prefix")
