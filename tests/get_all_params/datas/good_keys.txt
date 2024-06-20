@@ -1,0 +1,1 @@
+this is {mykey} the patterns {My-Key2} to extract {mY-kEy-3} and it shouldn't fail

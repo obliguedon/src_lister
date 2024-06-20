@@ -1,0 +1,12 @@
+good_keys = {"mykey": {"prefix" : None,
+                       "key": "mykey",
+                       "extension": None,
+                       "suffix": None},
+             "My-Key2": {"prefix" : None,
+                          "key": "My-Key2",
+                          "extension": None,
+                          "suffix": None},
+             "mY-kEy-3": {"prefix" : None,
+                          "key": "mY-kEy-3",
+                          "extension": None,
+                          "suffix": None}}
