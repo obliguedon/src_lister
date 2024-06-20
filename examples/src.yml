@@ -1,7 +1,0 @@
-sources:
-  - ./test.sv
-  - ./RAM.sv: SIM
-
-dependencies:
-  - ./other/other.yml
-  - ./etc/etc.yml
