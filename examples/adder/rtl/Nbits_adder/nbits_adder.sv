@@ -1,15 +1,16 @@
 module nbits_adder #(
     parameter WIDTH = 8
 ) (
+    input logic carry_in,
     input logic [WIDTH-1:0] a,
     input logic [WIDTH-1:0] b,
     output logic [WIDTH-1:0] sum,
-    output logic carry
+    output logic carry_out
 );
     logic middle_carry[WIDTH+1];
 
-    assign middle_carry[0] = 0;
-    assign carry = middle_carry[WIDTH+1];
+    assign middle_carry[0] = carry_in;
+    assign carry_out = middle_carry[WIDTH+1];
 
     generate
         genvar bit_nb;
