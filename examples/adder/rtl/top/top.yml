@@ -1,0 +1,7 @@
+sources:
+  - ./top.sv
+
+dependencies:
+  - ../packages.yml
+  - ../Nbits_adder/nbits_adder.yml
+  - ../new_Nbits_adder/new_nbits_adder.yml

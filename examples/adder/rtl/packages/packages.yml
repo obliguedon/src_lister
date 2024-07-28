@@ -1,0 +1,2 @@
+packages:
+  - ./calculator_pkg.sv
