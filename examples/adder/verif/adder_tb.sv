@@ -1,20 +1,39 @@
 module adder_tb ();
     localparam WIDTH = 8;
-    
+
+    import calculator_pkg::*;
+
+    logic clk;
+    logic reset_n;
     logic [WIDTH-1:0] in_a;
     logic [WIDTH-1:0] in_b;
     logic [WIDTH-1:0] out_sum;
-    logic out_carry;
-    
-    nbits_adder #(.WIDTH(WIDTH)) dut 
+    te_out_status status;
+    te_operation operation;
+
+    top #(.BIT_WIDTH(WIDTH)) dut
     (
+        .clk,
+        .reset_n,
         .a(in_a),
         .b(in_b),
-        .sum(out_sum),
-        .carry(out_carry)
+        .operation,
+        .result(out_sum),
+        .status
     );
 
-    initial begin
+    initial begin : clock_generation
+        clk = 0;
+        forever #1 clk = ~clk;
+    end : clock_generation
+
+    initial begin : power_up_reset
+        reset_n = 0;
+        #10;
+        reset_n = 1;
+    end : power_up_reset
+
+    initial begin : the_test
         $dumpfile("dump.vcd");
         $dumpvars;
         $display("==== beggin simulation ====");
@@ -43,5 +62,5 @@ module adder_tb ();
         in_b = 16;
         #1;
         if (out_sum != (in_a + in_b)) $display("the sum is incorrect");
-    end
+    end : the_test
 endmodule
