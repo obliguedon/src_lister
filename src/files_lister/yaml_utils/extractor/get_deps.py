@@ -7,7 +7,7 @@ def get_deps(yaml_file: pathlib.PosixPath) -> typing.List[pathlib.PosixPath]:
         all_deps = list()
         all_deps.append(yaml_file)
         # checking the input values
-        
+
         with open(yaml_file, 'r') as file:
             data_yaml = yaml.load(file, Loader=yaml.FullLoader)
 
@@ -28,5 +28,5 @@ def get_deps(yaml_file: pathlib.PosixPath) -> typing.List[pathlib.PosixPath]:
                         # TODO: check that element exist before putting it in the list
                         all_deps.append(dep)
 
-            all_deps = list(set(all_deps)) # remove duplicate
+            all_deps = list(dict.fromkeys(all_deps)) # remove duplicate while keeping order
             return all_deps

@@ -24,7 +24,7 @@ def get_files(all_deps: typing.List[pathlib.PosixPath], item: str, flag: str=Non
                         logging.debug(f"abs element item = {abs_element}")
 
                         if os.path.exists(abs_element):
-                            all_files.append(abs_element)
+                            all_files.insert(0, abs_element)
                         else:
                             logging.error(f"file \"{abs_element}\" not found")
                             raise FileNotFoundError(f"file \"{abs_element}\" not found")
@@ -41,11 +41,11 @@ def get_files(all_deps: typing.List[pathlib.PosixPath], item: str, flag: str=Non
                                 logging.debug(f"Add \"{abs_element}\" to the list")
 
                                 if os.path.exists(abs_element):
-                                    all_files.append(abs_element)
+                                    all_files.insert(0, abs_element)
                                 else:
                                     logging.error(f"file \"{abs_element}\" not found")
                                     raise FileNotFoundError(f"file \"{abs_element}\" not found")
             else:
                 logging.debug(f"\"{item}\" not found in \"{yaml_file}\"")
-        all_files = list(set(all_files))
+        all_files = list(dict.fromkeys(all_files)) # remove duplicate while keeping order
         return all_files
