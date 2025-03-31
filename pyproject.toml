@@ -30,7 +30,7 @@ dynamic = ["version"]
 
 
 [project.scripts]
-files_lister = "files_lister:main"
+files_lister = "files_lister.main:main"
 
 [project.urls]
 Repository = "https://github.com/obliguedon/src_lister"
